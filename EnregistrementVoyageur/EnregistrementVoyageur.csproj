@@ -5,4 +5,14 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="CentralTrainDB" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CentralTrainDB">
+      <HintPath>..\CentralTrainDB\bin\Debug\netcoreapp3.1\CentralTrainDB.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
