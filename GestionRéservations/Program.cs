@@ -7,7 +7,7 @@ namespace GestionRéservations
     {
         public static void Main()
         {
-            Console.WriteLine("Bienvenus sur le système de réservation de billet.");
+            Console.WriteLine("Bienvenue sur le système de réservation de billet.");
 
             Console.WriteLine("Identifiée vous.");
 
@@ -17,8 +17,7 @@ namespace GestionRéservations
             Console.WriteLine("Saisissez le numéro de train à réservé");
             var noTrain = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Combien de billets ?");
-            var nbBillets = short.Parse(Console.ReadLine());
+            var nbBillets = demanderNombreBillets();
 
             var train = Train.FetchById(noTrain);
             if (!train.HasSeatsAvailable())
@@ -32,6 +31,19 @@ namespace GestionRéservations
             {
                 Console.WriteLine($"Réservation {reservation} confirmée");
             }
+        }
+
+        private static int demanderNombreBillets()
+        {
+            int nbBillets = 0;
+
+            do
+            {
+                Console.WriteLine("Combien de billets ?");
+                nbBillets = short.Parse(Console.ReadLine());
+            } while (nbBillets > 4);
+
+            return nbBillets;
         }
     }
 }
