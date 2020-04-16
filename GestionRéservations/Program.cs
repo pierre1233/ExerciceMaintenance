@@ -33,5 +33,29 @@ namespace GestionRéservations
                 Console.WriteLine($"Réservation {reservation} confirmée");
             }
         }
+
+        public void AjouterTrain()
+        {
+            Console.WriteLine("Identifiez-vous pour pouvoir ajouter un train");
+
+            var login = Console.ReadLine();
+            if (login.Contains("RES_"))
+            {
+                var user = UserProvider.GetUser(login);
+
+                Console.WriteLine("Veuillez écrire l'identifiant du train: ");
+                int trainId = Int32.Parse(Console.ReadLine());
+
+                Console.WriteLine("Veuillez écrire la capacité d'accueil du train: ");
+                int capacity = Int32.Parse(Console.ReadLine());
+
+                var train = Train.Add(trainId, capacity);
+                Console.WriteLine("Le train n°" + train.TrainId + " a été ajouté");
+            }
+            else {
+                Console.WriteLine("Vous n'avez pas les droits d'accès à cette fonctionnalité");
+            }
+
+        }
     }
 }
