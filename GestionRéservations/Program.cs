@@ -7,14 +7,14 @@ namespace GestionRéservations
     {
         public static void Main()
         {
-            Console.WriteLine("Bienvenus sur le système de réservation de billet.");
+            Console.WriteLine("Bienvenue sur le système de réservation de billet.");
 
-            Console.WriteLine("Identifiée vous.");
+            Console.WriteLine("Identifiez vous.");
 
             var identifier = Console.ReadLine();
             var user = UserProvider.GetUser(identifier);
 
-            Console.WriteLine("Saisissez le numéro de train à réservé");
+            Console.WriteLine("Saisissez le numéro de train à réserver");
             var noTrain = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Combien de billets ?");

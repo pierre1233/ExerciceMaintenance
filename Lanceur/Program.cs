@@ -32,7 +32,7 @@ namespace Lanceur
                         ListeBillets.Program.Main();
                         break;
                     default:
-                        Console.WriteLine("Erreur de sésie.");
+                        Console.WriteLine("Erreur de saisie.");
                         break;
                 }
             }

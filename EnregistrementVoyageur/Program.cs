@@ -7,7 +7,7 @@ namespace EnregistrementVoyageur
     {
         public static void Main()
         {
-            Console.WriteLine("Bienvunu sur l'inregistrement voyageur !");
+            Console.WriteLine("Bienvenue sur l'enregistrement voyageur !");
 
             Console.WriteLine("Quel est votre login ?");
             var login = Console.ReadLine();
